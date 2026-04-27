@@ -142,25 +142,26 @@ export default async function ProjectDetailPage({
         </section>
       )}
 
-      {project.placeholder && (
+      {project.isCategory && (
         <section className="bg-cream pb-16 md:pb-24">
           <div className="container-narrow">
-            <div className="max-w-3xl mx-auto p-8 md:p-10 bg-white border border-charcoal-200 rounded-2xl text-center">
-              <div className="text-sm font-mono tracking-widest text-gold-600 mb-3">
-                COMING SOON
+            <div className="max-w-3xl mx-auto p-8 md:p-10 bg-charcoal-900 text-white rounded-2xl">
+              <div className="text-sm font-mono tracking-widest text-gold-400 mb-3">
+                NOTE
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-charcoal-900 mb-3">
-                상세 자료를 준비 중입니다
+              <h3 className="text-xl md:text-2xl font-bold mb-3">
+                상세 자료는 상담 시 공유드립니다
               </h3>
-              <p className="text-base text-muted leading-relaxed">
-                해당 프로젝트의 사진·도면·운영 데이터를 정리해서 곧 업데이트할
-                예정입니다. 미리 자세한 정보가 필요하시면 직접 문의 주세요.
+              <p className="text-base text-white/85 leading-relaxed">
+                개별 프로젝트의 임대 수익 데이터·평면도·견적 등 구체적인 자료는
+                상담 시 1:1로 공유드립니다. 비슷한 프로젝트를 검토 중이시면
+                편하게 문의 주세요.
               </p>
               <Link
                 href="/contact"
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-charcoal-900 px-6 py-3 text-sm font-semibold text-white hover:bg-charcoal-950 transition"
+                className="mt-6 inline-flex items-center gap-2 rounded-full bg-gold-500 px-6 py-3 text-sm font-semibold text-white hover:bg-gold-600 transition"
               >
-                프로젝트 문의하기
+                상담 신청하기
                 <ArrowRight className="size-4" />
               </Link>
             </div>

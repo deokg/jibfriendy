@@ -79,9 +79,9 @@ export function PortfolioGrid() {
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                     unoptimized
                   />
-                  {project.placeholder && (
+                  {project.isCategory && (
                     <div className="absolute top-4 right-4 bg-charcoal-900/80 backdrop-blur text-xs text-white/90 px-3 py-1.5 rounded-full">
-                      데이터 정리 중
+                      사례 시리즈
                     </div>
                   )}
                   <div className="absolute top-4 left-4 inline-flex items-center gap-2 rounded-full bg-white/95 backdrop-blur-sm px-3 py-1.5 text-xs font-semibold text-charcoal-900">
