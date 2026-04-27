@@ -10,9 +10,9 @@ import { mediaQuotes } from "@/data/media";
 import { values } from "@/data/values";
 
 export const metadata: Metadata = {
-  title: "회사 소개 — 3대째 이어온 경주 건축",
+  title: "회사 소개 — 3대째 이어온 건축 가문",
   description:
-    "할아버지부터 아버지, 그리고 본인까지 — 3대째 경주에서 건축업을 이어온 부동산 디벨로퍼. 대기업 10년 후 가업을 받아 시행·시공·운영을 직접 해온 트리플 전문가.",
+    "할아버지부터 아버지, 그리고 본인까지 — 3대째 건축업을 이어온 부동산 디벨로퍼. 대기업 10년 후 가업을 받아 시행·시공·운영을 직접 해온 트리플 전문가.",
 };
 
 export default function AboutPage() {
@@ -22,8 +22,8 @@ export default function AboutPage() {
 
       <PageHeader
         preHeadline="ABOUT"
-        heading="3대째 이어온 경주 건축, 디벨로퍼가 직접 짓습니다"
-        description="할아버지부터 아버지, 그리고 본인까지 — 경주에서 건축을 이어온 가문의 노하우가 모든 프로젝트에 녹아 있습니다."
+        heading="3대째 이어온 건축 가문, 디벨로퍼가 직접 짓습니다"
+        description="할아버지부터 아버지, 그리고 본인까지 — 3대째 건축을 이어온 가문의 노하우가 모든 프로젝트에 녹아 있습니다."
       />
 
       {/* Career Story */}
@@ -43,7 +43,7 @@ export default function AboutPage() {
 
             <div className="lg:col-span-8 space-y-6 text-lg text-charcoal-900 leading-relaxed">
               <p>
-                할아버지와 아버지에 이어 <strong className="text-gold-600">3대째 경주에서 건축업</strong>을 이어가는 가문입니다.
+                할아버지와 아버지에 이어 <strong className="text-gold-600">3대째 건축업</strong>을 이어가는 가문입니다.
                 어릴 때부터 현장에서 자랐고, 자연스럽게 건축의 ABC를 몸으로 익혔습니다.
               </p>
               <p>
