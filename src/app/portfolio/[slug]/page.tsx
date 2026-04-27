@@ -169,26 +169,25 @@ export default async function ProjectDetailPage({
         </section>
       )}
 
-      {/* Gallery */}
+      {/* Gallery — Masonry layout (각 사진의 원본 비율 유지) */}
       {project.gallery && project.gallery.length > 0 && (
         <section className="bg-cream pb-16 md:pb-24">
           <div className="container-narrow">
-            <div className="text-xs font-mono tracking-[0.3em] text-gold-600 mb-6 max-w-3xl mx-auto">
+            <div className="text-xs font-mono tracking-[0.3em] text-gold-600 mb-6">
               GALLERY
             </div>
-            <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+            <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 md:gap-6 [column-fill:_balance]">
               {project.gallery.map((src, i) => (
                 <div
                   key={i}
-                  className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-charcoal-100"
+                  className="break-inside-avoid mb-4 md:mb-6 rounded-2xl overflow-hidden bg-charcoal-100"
                 >
-                  <Image
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
                     src={src}
-                    alt={`${project.title} ${i + 1}`}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover"
-                    unoptimized
+                    alt={`${project.title} 갤러리 ${i + 1}`}
+                    loading="lazy"
+                    className="w-full h-auto block"
                   />
                 </div>
               ))}

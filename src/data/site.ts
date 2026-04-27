@@ -17,7 +17,7 @@ export const siteConfig = {
 
 export const contact = {
   email: "b_friendy@naver.com",
-  phone: "010-6773-0440",
+  phone: "010-7437-0440",
   address: "울산광역시 남구 번영로 189, 3층",
 };
 
