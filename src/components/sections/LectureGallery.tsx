@@ -5,23 +5,19 @@ import { motion } from "motion/react";
 const photos = [
   {
     src: "/images/lecture/classroom-1.jpg",
-    caption: "부스페이스 강의장 — '상권별 토지매입 전략' 세미나",
+    caption: "월천재테크 - 돈되는 꼬마빌딩 신축강의",
   },
   {
     src: "/images/lecture/field-trip-1.jpg",
-    caption: "수강생 현장 견학 — 뷰레스트풀빌라 운영 사례",
+    caption: "수강생 현장견학",
   },
   {
     src: "/images/lecture/classroom-2.jpg",
-    caption: "건축 디벨로퍼 강의 — 강사 소개 슬라이드",
-  },
-  {
-    src: "/images/lecture/classroom-3.jpg",
-    caption: "꼬마빌딩 신축 강의 — 대규모 강의장",
+    caption: "건축디벨로퍼 강의",
   },
   {
     src: "/images/lecture/classroom-4.jpg",
-    caption: "수강생 워크숍 — 사업성 분석 실습",
+    caption: "꼬마빌딩 신축사례",
   },
 ];
 
