@@ -1,0 +1,91 @@
+/* Pretendard - 한글 프리미엄 웹폰트 (반드시 다른 import보다 먼저) */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css");
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors — Option A: Architectural Premium */
+  --color-gold-50: #faf6f0;
+  --color-gold-100: #f3e9d8;
+  --color-gold-200: #e7d3b1;
+  --color-gold-300: #d2b388;
+  --color-gold-400: #c19f74;
+  --color-gold-500: #b8956a; /* Primary Accent — Warm Gold */
+  --color-gold-600: #a07c54;
+  --color-gold-700: #836547;
+  --color-gold-800: #6c533d;
+  --color-gold-900: #594535;
+
+  --color-charcoal-50: #f6f7f9;
+  --color-charcoal-100: #ebeef3;
+  --color-charcoal-200: #d3dae3;
+  --color-charcoal-300: #abb6c5;
+  --color-charcoal-400: #7d8da2;
+  --color-charcoal-500: #5d6f87;
+  --color-charcoal-600: #4a596e;
+  --color-charcoal-700: #3d495a;
+  --color-charcoal-800: #353e4d;
+  --color-charcoal-900: #1f2937; /* Primary Dark — Charcoal Navy */
+  --color-charcoal-950: #131a26;
+
+  --color-cream: #faf7f2; /* Section Background */
+  --color-muted: #6b7280; /* Muted Grey for body text */
+
+  /* Typography */
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+
+  /* Spacing scale extensions */
+  --spacing-section: 6rem;
+  --spacing-section-lg: 8rem;
+}
+
+:root {
+  --background: var(--color-cream);
+  --foreground: var(--color-charcoal-900);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss03", "ss04";
+  letter-spacing: -0.01em;
+}
+
+/* Korean text optimization */
+:lang(ko) {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid var(--color-gold-500);
+  outline-offset: 2px;
+}
+
+/* Utility */
+.container-narrow {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-narrow {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
