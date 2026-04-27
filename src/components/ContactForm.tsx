@@ -58,18 +58,31 @@ export function ContactForm() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
+  const [errorMessage, setErrorMessage] = useState<string>("");
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("submitting");
+    setErrorMessage("");
 
-    // TODO: 실제 제출은 배포 단계에서 Resend/Formspree 연동.
-    // 현재는 데모용 — 1초 후 성공 처리.
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1200));
-      console.log("Form submitted:", form);
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data?.error || "발송에 실패했습니다.");
+      }
+
       setStatus("success");
       setForm(initialForm);
-    } catch {
+    } catch (err) {
+      setErrorMessage(
+        err instanceof Error ? err.message : "발송에 실패했습니다."
+      );
       setStatus("error");
     }
   };
@@ -230,7 +243,7 @@ export function ContactForm() {
 
       {status === "error" && (
         <p className="text-sm text-red-600 text-center">
-          전송에 실패했습니다. 잠시 후 다시 시도해주세요.
+          {errorMessage || "전송에 실패했습니다. 잠시 후 다시 시도해주세요."}
         </p>
       )}
 

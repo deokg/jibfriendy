@@ -124,6 +124,7 @@ export const projects: Project[] = [
       "/images/projects/commercial/case-1.jpg",
       "/images/projects/commercial/case-2.jpg",
       "/images/projects/commercial/case-3.jpg",
+      "/images/projects/commercial/case-4.jpg",
     ],
     isCategory: true,
   },

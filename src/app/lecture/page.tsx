@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { PageHeader } from "@/components/PageHeader";
 import { CTA } from "@/components/sections/CTA";
+import { LectureGallery } from "@/components/sections/LectureGallery";
 import {
   lectureFeatures,
   curriculum,
@@ -138,6 +139,9 @@ export default function LecturePage() {
           </ul>
         </div>
       </section>
+
+      {/* Lecture Gallery — 강의·견학 현장 사진 */}
+      <LectureGallery />
 
       {/* FAQ */}
       <section className="bg-cream py-20 md:py-32 border-t border-charcoal-200">
